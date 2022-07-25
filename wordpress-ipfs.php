@@ -1,19 +1,17 @@
 <?php
 /**
- * Plugin Name: WordPress Plugin Template
+ * Plugin Name: WordPress IPFS
  * Version: 1.0.0
- * Plugin URI: http://www.hughlashbrooke.com/
- * Description: This is your starter template for your next WordPress plugin.
- * Author: Hugh Lashbrooke
- * Author URI: http://www.hughlashbrooke.com/
+ * Description: This is Wordpress IPFS uploader Plugin
+ * Author: Mauri Lehtola
  * Requires at least: 4.0
  * Tested up to: 4.0
  *
- * Text Domain: wordpress-plugin-template
+ * Text Domain: wordpress-ipfs
  * Domain Path: /lang/
  *
  * @package WordPress
- * @author Hugh Lashbrooke
+ * @author Mauri Lehtola
  * @since 1.0.0
  */
 
@@ -31,13 +29,13 @@ require_once 'includes/lib/class-wordpress-plugin-template-post-type.php';
 require_once 'includes/lib/class-wordpress-plugin-template-taxonomy.php';
 
 /**
- * Returns the main instance of WordPress_Plugin_Template to prevent the need to use globals.
+ * Returns the main instance of Wordpress_IPFS to prevent the need to use globals.
  *
  * @since  1.0.0
- * @return object WordPress_Plugin_Template
+ * @return object WordPress_IPFS
  */
 function wordpress_plugin_template() {
-	$instance = WordPress_Plugin_Template::instance( __FILE__, '1.0.0' );
+	$instance = WordPress_IPFS::instance( __FILE__, '1.0.0' );
 
 	if ( is_null( $instance->settings ) ) {
 		$instance->settings = WordPress_Plugin_Template_Settings::instance( $instance );
